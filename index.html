@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kropka.pl — Легализация в Польше</title>
+  <meta name="description" content="Карта побыта, гражданство и документы для иностранцев в Польше. Сопровождаем от первого обращения до результата. Катовице." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --forest: oklch(0.28 0.055 165);
+      --emerald: oklch(0.38 0.09 165);
+      --gold: oklch(0.78 0.13 82);
+      --ivory: oklch(0.98 0.01 90);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a1a; background: #fafaf8; }
+    .font-serif { font-family: 'Playfair Display', serif; }
+    .bg-forest { background-color: #1e3a2f; }
+    .bg-forest-light { background-color: #264d3e; }
+    .text-gold { color: #c9a84c; }
+    .text-ivory { color: #faf9f6; }
+    .border-gold { border-color: #c9a84c; }
+    .btn-gold { background-color: #c9a84c; color: #1e3a2f; }
+    .btn-gold:hover { filter: brightness(0.95); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    @media (min-width: 1024px) { .container { padding: 0 48px; } }
+    .hero-overlay {
+      background: linear-gradient(180deg, rgba(30,58,47,0.85) 0%, rgba(30,58,47,0.95) 60%, #1e3a2f 100%);
+    }
+    .card-shadow { box-shadow: 0 20px 60px rgba(0,0,0,0.15), 0 4px 16px rgba(0,0,0,0.08); }
+    input:focus, textarea:focus { outline: none; border-color: #1e3a2f; }
+    a { text-decoration: none; }
+    .nav-link { color: rgba(250,249,246,0.8); font-size: 14px; transition: color 0.2s; }
+    .nav-link:hover { color: #c9a84c; }
+    .social-link { color: rgba(250,249,246,0.6); transition: color 0.2s; }
+    .social-link:hover { color: #c9a84c; }
+    .tag-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1px solid rgba(201,168,76,0.3);
+      background: rgba(201,168,76,0.05);
+      padding: 6px 16px; border-radius: 999px;
+      font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em;
+      color: #c9a84c;
+    }
+    @keyframes floatIn {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-in { animation: floatIn 0.6s ease forwards; }
+    .delay-1 { animation-delay: 0.1s; opacity: 0; }
+    .delay-2 { animation-delay: 0.2s; opacity: 0; }
+    .delay-3 { animation-delay: 0.3s; opacity: 0; }
+    .service-card {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.07);
+      border-radius: 20px;
+      padding: 32px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .service-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.1); transform: translateY(-2px); }
+    .step-number {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.25);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif; font-size: 18px; color: #c9a84c;
+      flex-shrink: 0;
+    }
+    .form-input {
+      width: 100%; border: none; border-bottom: 1px solid #ddd;
+      background: transparent; padding: 8px 0; font-size: 15px;
+      color: #1a1a1a; transition: border-color 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .form-input:focus { border-color: #1e3a2f; }
+    .form-input::placeholder { color: #aaa; }
+    .form-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: #888; }
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] .chevron { transform: rotate(180deg); }
+    .chevron { transition: transform 0.2s; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header style="position:absolute;top:0;left:0;right:0;z-index:20;">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding-top:24px;padding-bottom:24px;">
+    <a href="#top" style="display:flex;align-items:center;gap:10px;color:#faf9f6;">
+      <div style="width:36px;height:36px;background:#c9a84c;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+        <span style="font-family:'Playfair Display',serif;font-weight:700;font-size:16px;color:#1e3a2f;">K</span>
+      </div>
+      <span class="font-serif" style="font-size:20px;letter-spacing:-0.02em;">Kropka<span class="text-gold">.pl</span></span>
+    </a>
+    <nav style="display:none;" id="desktop-nav">
+      <a href="#services" class="nav-link" style="margin-right:36px;">Услуги</a>
+      <a href="#process" class="nav-link" style="margin-right:36px;">Как работаем</a>
+      <a href="#about" class="nav-link" style="margin-right:36px;">О нас</a>
+      <a href="#contact" class="nav-link">Контакты</a>
+    </nav>
+    <a href="#contact" class="btn-gold" style="display:inline-flex;align-items:center;border-radius:999px;padding:10px 20px;font-size:14px;font-weight:500;transition:filter 0.2s;">
+      Оставить заявку
+    </a>
+  </div>
+</header>
+<style>
+  @media (min-width: 768px) { #desktop-nav { display: flex !important; align-items: center; } }
+</style>
+
+<!-- HERO -->
+<section id="top" style="position:relative;min-height:100svh;overflow:hidden;background:#1e3a2f;color:#faf9f6;">
+  <div class="hero-overlay" style="position:absolute;inset:0;z-index:1;"></div>
+  <div class="container" style="position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;min-height:100svh;padding-top:128px;padding-bottom:80px;">
+    <span class="tag-badge animate-in">Legalizacja w Polsce · с 2018 года</span>
+    <h1 class="font-serif animate-in delay-1" style="margin-top:32px;max-width:900px;font-size:clamp(44px,8vw,88px);line-height:1.05;letter-spacing:-0.02em;">
+      Ставим точку<br />
+      <span class="text-gold" style="font-style:italic;">в вопросах</span> легализации<span class="text-gold">.</span>
+    </h1>
+    <p class="animate-in delay-2" style="margin-top:32px;max-width:560px;font-size:18px;line-height:1.7;color:rgba(250,249,246,0.75);">
+      Карта побыта, гражданство и документы для иностранцев в Польше.<br />
+      Сопровождаем от первого обращения до результата.
+    </p>
+    <div class="animate-in delay-3" style="margin-top:40px;display:flex;flex-wrap:wrap;align-items:center;gap:16px;">
+      <a href="#contact" class="btn-gold" style="display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:14px 28px;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,0.2);">
+        Оставить заявку <span>→</span>
+      </a>
+      <a href="#services" style="font-size:14px;color:rgba(250,249,246,0.8);text-decoration:underline;text-underline-offset:6px;">
+        Посмотреть услуги
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" style="background:#faf9f6;padding:96px 0;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:64px;">
+      <span class="tag-badge" style="color:#c9a84c;border-color:rgba(201,168,76,0.3);background:rgba(201,168,76,0.05);">Что мы делаем</span>
+      <h2 class="font-serif" style="margin-top:16px;font-size:clamp(32px,5vw,48px);color:#1e3a2f;">Наши услуги</h2>
+      <p style="margin-top:16px;max-width:500px;margin-left:auto;margin-right:auto;color:#666;line-height:1.7;">
+        Полное сопровождение — от подготовки документов до получения решения
+      </p>
+    </div>
+    <div style="display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+      <div class="service-card">
+        <div style="font-size:32px;margin-bottom:16px;">📋</div>
+        <h3 class="font-serif" style="font-size:22px;color:#1e3a2f;margin-bottom:12px;">Карта побыта</h3>
+        <p style="color:#666;line-height:1.7;font-size:15px;">Временный и постоянный вид на жительство. Подготовка пакета документов, запись на визит, контроль сроков.</p>
+      </div>
+      <div class="service-card">
+        <div style="font-size:32px;margin-bottom:16px;">🇵🇱</div>
+        <h3 class="font-serif" style="font-size:22px;color:#1e3a2f;margin-bottom:12px;">Гражданство Польши</h3>
+        <p style="color:#666;line-height:1.7;font-size:15px;">Оформление гражданства через польское происхождение, долгосрочное проживание или другие основания.</p>
+      </div>
+      <div class="service-card">
+        <div style="font-size:32px;margin-bottom:16px;">💼</div>
+        <h3 class="font-serif" style="font-size:22px;color:#1e3a2f;margin-bottom:12px;">Рабочие документы</h3>
+        <p style="color:#666;line-height:1.7;font-size:15px;">Разрешение на работу, oświadczenie, зенование карты и другие трудовые вопросы.</p>
+      </div>
+      <div class="service-card">
+        <div style="font-size:32px;margin-bottom:16px;">👨‍👩‍👧</div>
+        <h3 class="font-serif" style="font-size:22px;color:#1e3a2f;margin-bottom:12px;">Воссоединение семьи</h3>
+        <p style="color:#666;line-height:1.7;font-size:15px;">Карта побыта для членов семьи, приглашение родственников, оформление документов для детей.</p>
+      </div>
+      <div class="service-card">
+        <div style="font-size:32px;margin-bottom:16px;">🏢</div>
+        <h3 class="font-serif" style="font-size:22px;color:#1e3a2f;margin-bottom:12px;">Открытие бизнеса</h3>
+        <p style="color:#666;line-height:1.7;font-size:15px;">Регистрация предприятия, NIP, REGON, ZUS — сопровождение от А до Я.</p>
+      </div>
+      <div class="service-card">
+        <div style="font-size:32px;margin-bottom:16px;">📝</div>
+        <h3 class="font-serif" style="font-size:22px;color:#1e3a2f;margin-bottom:12px;">Прочие документы</h3>
+        <p style="color:#666;line-height:1.7;font-size:15px;">PESEL, нотариальные переводы, апостили, легализация иностранных документов в Польше.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" style="background:#fff;padding:96px 0;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:64px;">
+      <span class="tag-badge" style="color:#c9a84c;">Как работаем</span>
+      <h2 class="font-serif" style="margin-top:16px;font-size:clamp(32px,5vw,48px);color:#1e3a2f;">Четыре шага до результата</h2>
+    </div>
+    <div style="max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:40px;">
+      <div style="display:flex;gap:24px;align-items:flex-start;">
+        <div class="step-number">1</div>
+        <div>
+          <h3 class="font-serif" style="font-size:20px;color:#1e3a2f;margin-bottom:8px;">Оставляете заявку</h3>
+          <p style="color:#666;line-height:1.7;">Заполняете форму или пишете в мессенджер — мы перезваниваем в течение рабочего дня.</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:24px;align-items:flex-start;">
+        <div class="step-number">2</div>
+        <div>
+          <h3 class="font-serif" style="font-size:20px;color:#1e3a2f;margin-bottom:8px;">Разбор ситуации</h3>
+          <p style="color:#666;line-height:1.7;">Индивидуальный анализ вашего случая: какие документы нужны, какие сроки, какие риски.</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:24px;align-items:flex-start;">
+        <div class="step-number">3</div>
+        <div>
+          <h3 class="font-serif" style="font-size:20px;color:#1e3a2f;margin-bottom:8px;">Подготовка и подача</h3>
+          <p style="color:#666;line-height:1.7;">Составляем пакет документов, записываемся на визит, сопровождаем на каждом этапе.</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:24px;align-items:flex-start;">
+        <div class="step-number">4</div>
+        <div>
+          <h3 class="font-serif" style="font-size:20px;color:#1e3a2f;margin-bottom:8px;">Получение результата</h3>
+          <p style="color:#666;line-height:1.7;">Контролируем процесс до получения карты или решения. На связи по любым вопросам.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="background:#faf9f6;padding:96px 0;">
+  <div class="container">
+    <div style="display:grid;gap:64px;align-items:center;" class="about-grid">
+      <div>
+        <span class="tag-badge" style="color:#c9a84c;">О нас</span>
+        <h2 class="font-serif" style="margin-top:16px;font-size:clamp(32px,5vw,48px);color:#1e3a2f;line-height:1.1;">
+          Работаем в Польше<br /><span style="font-style:italic;" class="text-gold">с 2018 года</span>
+        </h2>
+        <p style="margin-top:24px;color:#555;line-height:1.8;font-size:16px;">
+          Kropka.pl — команда специалистов по легализации иностранцев в Польше. Мы помогаем украинцам, белорусам, русскоязычным жителям разобраться в польском законодательстве и получить необходимые документы.
+        </p>
+        <p style="margin-top:16px;color:#555;line-height:1.8;font-size:16px;">
+          Наш офис находится в Катовице. Работаем лично и дистанционно — если вы в другом городе Польши, мы найдём решение.
+        </p>
+        <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:32px;">
+          <div>
+            <div class="font-serif" style="font-size:36px;color:#c9a84c;">7+</div>
+            <div style="font-size:13px;color:#888;margin-top:4px;">лет опыта</div>
+          </div>
+          <div>
+            <div class="font-serif" style="font-size:36px;color:#c9a84c;">3</div>
+            <div style="font-size:13px;color:#888;margin-top:4px;">языка</div>
+          </div>
+          <div>
+            <div class="font-serif" style="font-size:36px;color:#c9a84c;">100%</div>
+            <div style="font-size:13px;color:#888;margin-top:4px;">прозрачность</div>
+          </div>
+        </div>
+      </div>
+      <div style="background:#1e3a2f;border-radius:24px;padding:40px;color:#faf9f6;">
+        <h3 class="font-serif" style="font-size:22px;margin-bottom:24px;">Почему выбирают нас</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:16px;">
+          <li style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="color:#c9a84c;flex-shrink:0;margin-top:2px;">✓</span>
+            <span style="color:rgba(250,249,246,0.8);line-height:1.6;">Говорим на русском, украинском и польском</span>
+          </li>
+          <li style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="color:#c9a84c;flex-shrink:0;margin-top:2px;">✓</span>
+            <span style="color:rgba(250,249,246,0.8);line-height:1.6;">Чёткие сроки и прозрачная стоимость — без скрытых платежей</span>
+          </li>
+          <li style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="color:#c9a84c;flex-shrink:0;margin-top:2px;">✓</span>
+            <span style="color:rgba(250,249,246,0.8);line-height:1.6;">Индивидуальный подход к каждому случаю</span>
+          </li>
+          <li style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="color:#c9a84c;flex-shrink:0;margin-top:2px;">✓</span>
+            <span style="color:rgba(250,249,246,0.8);line-height:1.6;">Остаёмся на связи до получения результата</span>
+          </li>
+          <li style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="color:#c9a84c;flex-shrink:0;margin-top:2px;">✓</span>
+            <span style="color:rgba(250,249,246,0.8);line-height:1.6;">Офис в центре Катовице, работаем и дистанционно</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  @media (min-width: 1024px) { .about-grid { grid-template-columns: 1fr 1fr; } }
+</style>
+
+<!-- CTA / CONTACT -->
+<section id="contact" style="background:#faf9f6;padding-bottom:112px;">
+  <div class="container">
+    <div style="position:relative;overflow:hidden;border-radius:24px;background:#1e3a2f;padding:40px;color:#faf9f6;" class="card-shadow">
+      <div style="position:absolute;right:-128px;top:-128px;width:384px;height:384px;border-radius:50%;opacity:0.3;filter:blur(80px);background:radial-gradient(circle, #c9a84c, #e8d5a3);pointer-events:none;"></div>
+      <div style="position:relative;display:grid;gap:48px;align-items:center;" class="cta-grid">
+        <div>
+          <span class="tag-badge" style="border-color:rgba(201,168,76,0.3);background:rgba(201,168,76,0.05);">Оставить заявку</span>
+          <h2 class="font-serif" style="margin-top:16px;font-size:clamp(28px,5vw,48px);line-height:1.1;">
+            Спокойствие начинается<br /><span style="font-style:italic;" class="text-gold">с документов.</span>
+          </h2>
+          <p style="margin-top:24px;max-width:400px;color:rgba(250,249,246,0.7);line-height:1.7;">
+            Оставьте контакт — перезвоним в течение рабочего дня и предложим удобное время для индивидуального разбора вашей ситуации.
+          </p>
+          <ul style="margin-top:32px;display:flex;flex-direction:column;gap:10px;font-size:14px;color:rgba(250,249,246,0.75);">
+            <li>📍 Katowice, ul. Korfantego 2/211</li>
+            <li>📞 <a href="tel:+48539408468" style="color:rgba(250,249,246,0.75);transition:color 0.2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(250,249,246,0.75)'">+48 539 408 468</a></li>
+            <li>✉ <a href="mailto:biuro.viktoriia@gmail.com" style="color:rgba(250,249,246,0.75);transition:color 0.2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(250,249,246,0.75)'">biuro.viktoriia@gmail.com</a></li>
+          </ul>
+          <div style="margin-top:32px;display:flex;align-items:center;gap:16px;">
+            <a href="https://wa.me/48539408468" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-link">
+              <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="viber://chat?number=%2B48539408468" aria-label="Viber" class="social-link">
+              <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:currentColor"><path d="M11.398.002C8.473.028 4.178.638 1.849 2.737 .143 4.243-.025 6.35.003 8.997c.025 2.644.063 7.597 4.651 8.96h.004l-.004 2.055s-.027.745.463 1.033c.552.343 1.035-.042 1.866-.933 0 0 .434-.467.756-.851 2.933.771 5.893.405 6.479.304 1.399-.219 4.703-.74 5.354-4.789.671-4.169-.082-6.801-1.438-8.06l-.002-.002C16.698.625 13.623-.023 11.398.002zm.093 1.394c1.923-.018 4.695.464 6.277 1.799l.002.001c1.053.977 1.73 3.168 1.15 6.848-.51 3.163-3.054 3.557-4.261 3.741-.523.082-3.211.418-5.828-.163-.001 0-.002.001-.003 0l-.243.28c-.33.38-.574.649-.748.834 0-1.058-.052-.993-.052-.993l-.002-.006C4.6 13.652 4.441 9.67 4.421 8.039 4.399 5.757 4.55 4.053 5.902 2.871c1.803-1.462 4.665-1.456 5.589-1.475z"/></svg>
+            </a>
+            <a href="https://t.me/kropkapl" target="_blank" rel="noopener" aria-label="Telegram" class="social-link">
+              <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            </a>
+            <a href="https://instagram.com/kropka.pl" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+              <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://facebook.com/kropka.pl" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
+              <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <form action="https://formspree.io/f/mojolyke" method="POST" style="border-radius:16px;background:#faf9f6;padding:32px;color:#1a1a1a;">
+          <div style="display:grid;gap:16px;grid-template-columns:1fr 1fr;margin-bottom:16px;">
+            <label style="display:block;">
+              <span class="form-label">Имя</span>
+              <input type="text" name="name" class="form-input" placeholder="Иван" style="margin-top:8px;" />
+            </label>
+            <label style="display:block;">
+              <span class="form-label">Телефон</span>
+              <input type="tel" name="phone" class="form-input" placeholder="+48" style="margin-top:8px;" required />
+            </label>
+          </div>
+          <label style="display:block;margin-bottom:16px;">
+            <span class="form-label">Опишите ситуацию</span>
+            <textarea rows="3" name="message" class="form-input" placeholder="Карта побыта, заканчивается в марте…" style="margin-top:8px;resize:none;"></textarea>
+          </label>
+          <button type="submit" style="width:100%;background:#1e3a2f;color:#faf9f6;border:none;border-radius:999px;padding:14px;font-size:14px;font-weight:600;cursor:pointer;transition:background 0.2s;font-family:'Inter',sans-serif;" onmouseover="this.style.background='#264d3e'" onmouseout="this.style.background='#1e3a2f'">
+            Оставить заявку
+          </button>
+          <p style="text-align:center;font-size:11px;color:#aaa;margin-top:12px;">
+            Отправляя форму, вы соглашаетесь с обработкой персональных данных.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  @media (min-width: 1024px) { .cta-grid { grid-template-columns: 1fr 1fr; } }
+</style>
+
+<!-- FAQ -->
+<section style="background:#fff;padding:96px 0;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:64px;">
+      <span class="tag-badge" style="color:#c9a84c;">Вопрос — ответ</span>
+      <h2 class="font-serif" style="margin-top:16px;font-size:clamp(28px,4vw,40px);color:#1e3a2f;">Часто спрашивают</h2>
+    </div>
+    <div style="max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:0;">
+      <details style="border-bottom:1px solid #eee;padding:20px 0;">
+        <summary style="display:flex;justify-content:space-between;align-items:center;font-size:16px;font-weight:500;color:#1e3a2f;">
+          Сколько стоят ваши услуги?
+          <svg class="chevron" viewBox="0 0 24 24" style="width:18px;height:18px;fill:none;stroke:#888;stroke-width:2;flex-shrink:0;"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p style="margin-top:12px;color:#666;line-height:1.7;font-size:15px;">Стоимость зависит от сложности ситуации. Называем цену после первого разбора — никаких неожиданных счетов. Звоните, посчитаем конкретно.</p>
+      </details>
+      <details style="border-bottom:1px solid #eee;padding:20px 0;">
+        <summary style="display:flex;justify-content:space-between;align-items:center;font-size:16px;font-weight:500;color:#1e3a2f;">
+          Работаете ли вы дистанционно?
+          <svg class="chevron" viewBox="0 0 24 24" style="width:18px;height:18px;fill:none;stroke:#888;stroke-width:2;flex-shrink:0;"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p style="margin-top:12px;color:#666;line-height:1.7;font-size:15px;">Да. Офис в Катовице, но большинство вопросов решается онлайн или по телефону. Приехать нужно только для подписания некоторых документов.</p>
+      </details>
+      <details style="border-bottom:1px solid #eee;padding:20px 0;">
+        <summary style="display:flex;justify-content:space-between;align-items:center;font-size:16px;font-weight:500;color:#1e3a2f;">
+          Сколько ждать карту побыта?
+          <svg class="chevron" viewBox="0 0 24 24" style="width:18px;height:18px;fill:none;stroke:#888;stroke-width:2;flex-shrink:0;"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p style="margin-top:12px;color:#666;line-height:1.7;font-size:15px;">После подачи — обычно 3–6 месяцев, иногда дольше. Зависит от воеводства и нагрузки. Мы помогаем со штампом в паспорт, который позволяет легально находиться в Польше всё это время.</p>
+      </details>
+      <details style="border-bottom:1px solid #eee;padding:20px 0;">
+        <summary style="display:flex;justify-content:space-between;align-items:center;font-size:16px;font-weight:500;color:#1e3a2f;">
+          Можно ли работать в Польше по карте побыту?
+          <svg class="chevron" viewBox="0 0 24 24" style="width:18px;height:18px;fill:none;stroke:#888;stroke-width:2;flex-shrink:0;"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p style="margin-top:12px;color:#666;line-height:1.7;font-size:15px;">Зависит от типа карты. Карта побыту для сотрудника (pracownik) — да. Некоторые основания требуют отдельного разрешения. Разберём на консультации.</p>
+      </details>
+      <details style="padding:20px 0;">
+        <summary style="display:flex;justify-content:space-between;align-items:center;font-size:16px;font-weight:500;color:#1e3a2f;">
+          На каком языке вы работаете?
+          <svg class="chevron" viewBox="0 0 24 24" style="width:18px;height:18px;fill:none;stroke:#888;stroke-width:2;flex-shrink:0;"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p style="margin-top:12px;color:#666;line-height:1.7;font-size:15px;">На русском, украинском и польском. Объясняем сложные моменты понятным языком.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#1e3a2f;padding:48px 0;color:rgba(250,249,246,0.7);">
+  <div class="container">
+    <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:center;justify-content:space-between;margin-bottom:32px;">
+      <a href="#top" style="display:flex;align-items:center;gap:10px;color:#faf9f6;text-decoration:none;">
+        <div style="width:28px;height:28px;background:#c9a84c;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:#1e3a2f;">K</span>
+        </div>
+        <span class="font-serif" style="font-size:16px;">Kropka<span class="text-gold">.pl</span></span>
+      </a>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <a href="https://wa.me/48539408468" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-link">
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="viber://chat?number=%2B48539408468" aria-label="Viber" class="social-link">
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor"><path d="M11.398.002C8.473.028 4.178.638 1.849 2.737 .143 4.243-.025 6.35.003 8.997c.025 2.644.063 7.597 4.651 8.96h.004l-.004 2.055s-.027.745.463 1.033c.552.343 1.035-.042 1.866-.933 0 0 .434-.467.756-.851 2.933.771 5.893.405 6.479.304 1.399-.219 4.703-.74 5.354-4.789.671-4.169-.082-6.801-1.438-8.06l-.002-.002C16.698.625 13.623-.023 11.398.002zm.093 1.394c1.923-.018 4.695.464 6.277 1.799l.002.001c1.053.977 1.73 3.168 1.15 6.848-.51 3.163-3.054 3.557-4.261 3.741-.523.082-3.211.418-5.828-.163-.001 0-.002.001-.003 0l-.243.28c-.33.38-.574.649-.748.834 0-1.058-.052-.993-.052-.993l-.002-.006C4.6 13.652 4.441 9.67 4.421 8.039 4.399 5.757 4.55 4.053 5.902 2.871c1.803-1.462 4.665-1.456 5.589-1.475z"/></svg>
+        </a>
+        <a href="https://t.me/kropkapl" target="_blank" rel="noopener" aria-label="Telegram" class="social-link">
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        </a>
+        <a href="https://instagram.com/kropka.pl" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+        <a href="https://facebook.com/kropka.pl" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(250,249,246,0.1);padding-top:32px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;">
+      <p style="font-size:12px;">© 2025 Kropka.pl · Ставим точку в вопросах легализации.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:20px;font-size:12px;">
+        <a href="/regulamin.html" style="color:rgba(250,249,246,0.7);transition:color 0.2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(250,249,246,0.7)'">Regulamin</a>
+        <a href="/polityka-cookies.html" style="color:rgba(250,249,246,0.7);transition:color 0.2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(250,249,246,0.7)'">Polityka Cookies</a>
+        <a href="/polityka-bezpieczenstwa.html" style="color:rgba(250,249,246,0.7);transition:color 0.2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(250,249,246,0.7)'">Polityka bezpieczeństwa</a>
+        <a href="/rodo.html" style="color:rgba(250,249,246,0.7);transition:color 0.2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(250,249,246,0.7)'">RODO</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    const phone = document.getElementById('phone-input').value;
+    if (!phone) return;
+    document.getElementById('submit-btn').disabled = true;
+    document.getElementById('submit-btn').textContent = 'Отправлено ✓';
+    document.getElementById('form-success').style.display = 'block';
+  }
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+</script>
+</body>
+</html>
