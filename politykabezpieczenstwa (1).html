@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polityka Bezpieczeństwa — Kropka.pl</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --forest: #1a3328; --gold: #c9a96e; --ivory: #f5f0e8; --bg: #f4efe6; --text: #1a1a18; --muted: #6b6b68; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); -webkit-font-smoothing: antialiased; }
+    a { color: var(--forest); }
+    .header { background: var(--forest); padding: 32px 0; }
+    .header-inner { max-width: 860px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; gap: 10px; color: var(--ivory); text-decoration: none; font-family: 'Cormorant Garamond', serif; font-size: 20px; }
+    .logo-icon { width: 32px; height: 32px; border-radius: 50%; border: 1.5px solid rgba(201,169,110,0.5); display: flex; align-items: center; justify-content: center; }
+    .logo-icon svg { width: 16px; height: 16px; fill: var(--gold); }
+    .logo span { color: var(--gold); }
+    .back { font-size: 13px; color: rgba(245,240,232,0.6); text-decoration: none; transition: color .2s; }
+    .back:hover { color: var(--ivory); }
+    .content { max-width: 860px; margin: 0 auto; padding: 64px 32px 100px; }
+    h1 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 40px; color: var(--text); margin-bottom: 8px; line-height: 1.1; }
+    .date { font-size: 13px; color: var(--muted); margin-bottom: 48px; }
+    h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 22px; color: var(--forest); margin: 40px 0 14px; }
+    p { font-size: 15px; line-height: 1.85; color: #3a3a38; margin-bottom: 14px; }
+    ul { padding-left: 20px; margin-bottom: 14px; }
+    li { font-size: 15px; line-height: 1.85; color: #3a3a38; margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+<div class="header">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/></svg></div>
+      Kropka<span>.pl</span>
+    </a>
+    <a href="/" class="back">← Powrót na stronę główną</a>
+  </div>
+</div>
+
+<div class="content">
+  <h1>Polityka Bezpieczeństwa</h1>
+  <p class="date">Obowiązuje od: 1 lipca 2025 r. · Ostatnia aktualizacja: 21 lipca 2026 r.</p>
+
+  <h2>1. Cel dokumentu</h2>
+  <p>Niniejsza Polityka Bezpieczeństwa opisuje środki techniczne i organizacyjne stosowane przez <strong>Kropka.pl</strong> w celu ochrony danych osobowych Klientów zgodnie z wymogami RODO (Rozporządzenie UE 2016/679).</p>
+
+  <h2>2. Środki techniczne</h2>
+  <ul>
+    <li><strong>Szyfrowanie transmisji (HTTPS/TLS):</strong> Strona internetowa jest dostępna wyłącznie przez protokół HTTPS. Połączenie z serwerem jest szyfrowane, co uniemożliwia przechwycenie danych w trakcie przesyłania.</li>
+    <li><strong>Bezpieczna obsługa formularzy:</strong> Formularz kontaktowy obsługiwany jest przez serwis Formspree, który stosuje zabezpieczenia przed automatycznym spamem i nieautoryzowanym dostępem.</li>
+    <li><strong>Hosting statyczny:</strong> Strona hostowana jest na GitHub Pages — statycznym hostingu bez bazy danych, co minimalizuje ryzyko wycieku danych.</li>
+    <li><strong>Narzędzia analityczne i reklamowe z kontrolą zgody:</strong> Strona wykorzystuje Google Analytics 4 (G-08MSSBDJTM) oraz Google Ads (AW-6399773270) wyłącznie po uzyskaniu wyraźnej zgody użytkownika za pośrednictwem banera cookie. Dane analityczne są anonimizowane (anonymize_ip: true). Bez zgody żadne zewnętrzne skrypty śledzące nie są ładowane.</li>
+  </ul>
+
+  <h2>3. Środki organizacyjne</h2>
+  <ul>
+    <li>Dostęp do danych Klientów mają wyłącznie osoby bezpośrednio zaangażowane w obsługę danej sprawy.</li>
+    <li>Korespondencja e-mail z Klientami prowadzona jest przez zabezpieczone konto pocztowe z uwierzytelnianiem dwuskładnikowym (2FA).</li>
+    <li>Dokumenty papierowe klientów przechowywane są w zamkniętym pomieszczeniu biurowym z ograniczonym dostępem.</li>
+    <li>Po zakończeniu współpracy dane Klienta są przechowywane przez minimalny wymagany prawem okres, a następnie trwale usuwane.</li>
+  </ul>
+
+  <h2>4. Naruszenia ochrony danych</h2>
+  <p>W przypadku wykrycia naruszenia ochrony danych osobowych, Usługodawca zobowiązuje się do:</p>
+  <ul>
+    <li>oceny ryzyka dla praw i wolności osób, których dane dotyczą,</li>
+    <li>zgłoszenia naruszenia do Prezesa UODO w ciągu 72 godzin od jego wykrycia (jeśli naruszenie stwarza ryzyko),</li>
+    <li>poinformowania poszkodowanych osób bez zbędnej zwłoki (w przypadku wysokiego ryzyka).</li>
+  </ul>
+
+  <h2>5. Kontakt w sprawach bezpieczeństwa</h2>
+  <p>Jeśli zauważysz podatność lub masz pytania dotyczące bezpieczeństwa danych, skontaktuj się z nami:</p>
+  <p><a href="mailto:biuro.viktoriia@gmail.com">biuro.viktoriia@gmail.com</a> · <a href="tel:+48539408468">+48 539 408 468</a></p>
+
+  <h2>6. Przegląd i aktualizacje</h2>
+  <p>Polityka Bezpieczeństwa jest przeglądana i aktualizowana co najmniej raz w roku lub każdorazowo po istotnej zmianie w systemach informatycznych lub procesach przetwarzania danych.</p>
+</div>
+</body>
+</html>
