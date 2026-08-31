@@ -509,7 +509,7 @@
 </div>
 </div>
 <div class="cta-right">
-<form action="https://formspree.io/f/mojolyke" class="cta-form-wrap" method="POST">
+<form action="https://formspree.io/f/mojolyke" class="cta-form-wrap" method="POST" onsubmit="if(window.fbq){fbq('track','Lead');}">
 <div class="form-row">
 <div class="form-field">
 <label data-i="form_name_label">Name</label>
@@ -613,6 +613,7 @@
   // ── COOKIE CONSENT ──────────────────────────────────────────
   const GA_ID = 'G-08MSSBDJTM';
   const AW_ID = 'AW-6399773270';
+  const META_PIXEL_ID = '1529138715636242';
 
   function loadGA() {
     if (window._gaLoaded) return;
@@ -629,14 +630,29 @@
     gtag('config', AW_ID);
   }
 
+  function loadMetaPixel() {
+    if (window._fbPixelLoaded) return;
+    window._fbPixelLoaded = true;
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', META_PIXEL_ID);
+    fbq('track', 'PageView');
+  }
+
   function setCookieConsent(val) {
     localStorage.setItem('cookie_consent', val);
     document.getElementById('cookie-banner').style.display = 'none';
-    if (val === 'all') loadGA();
+    if (val === 'all') { loadGA(); loadMetaPixel(); }
   }
 
   var consent = localStorage.getItem('cookie_consent');
-  if (consent === 'all') { loadGA(); }
+  if (consent === 'all') { loadGA(); loadMetaPixel(); }
   else if (!consent) {
     setTimeout(function() {
       document.getElementById('cookie-banner').style.display = 'flex';
