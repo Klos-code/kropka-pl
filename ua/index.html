@@ -209,7 +209,7 @@
     .social-row a { width: 36px; height: 36px; border-radius: 6px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--muted); transition: color .2s, border-color .2s; }
     .social-row a:hover { color: var(--gold); border-color: rgba(201,169,110,0.3); }
     .social-row svg { width: 16px; height: 16px; fill: currentColor; }
-    .cta-right { padding: 48px; display: flex; align-items: center; }
+    .cta-right { padding: 48px; display: flex; align-items: center; scroll-margin-top: 84px; }
     .cta-form-wrap { width: 100%; }
     .form-intro { font-size: 13px; line-height: 1.6; color: var(--text); background: var(--gold-dim); border: 1px solid rgba(201,169,110,0.15); border-radius: 8px; padding: 14px 16px; margin-bottom: 24px; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
@@ -316,7 +316,7 @@
 </div>
 <div class="nav-right">
 <div class="lang-switcher"><a class="lang-btn" href="/">RU</a><span class="dot">·</span><a class="lang-btn active" href="/ua/">UA</a><span class="dot">·</span><a class="lang-btn" href="/pl/">PL</a><span class="dot">·</span><a class="lang-btn" href="/en/">EN</a></div>
-<a class="btn-cta" data-i="nav_cta" href="#contact">Залишити заявку</a>
+<a class="btn-cta" data-i="nav_cta" href="#contact-form">Залишити заявку</a>
 </div>
 </div>
 </div>
@@ -338,7 +338,7 @@
 <div class="hero-rest">
 <p class="hero-sub reveal reveal-delay-2" data-i="hero_sub">Карта побуту, громадянство та документи для іноземців у Польщі.<br/>Супроводжуємо від першої заявки до результату.</p>
 <div class="hero-actions reveal reveal-delay-3">
-<a class="btn-primary" data-i="hero_btn1" href="#contact">Залишити заявку →</a>
+<a class="btn-primary" data-i="hero_btn1" href="#contact-form">Залишити заявку →</a>
 <a class="btn-ghost" data-i="hero_btn2" href="#services">Переглянути послуги</a>
 </div>
 <div class="hero-contacts reveal reveal-delay-4">
@@ -597,7 +597,7 @@
 </a>
 </div>
 </div>
-<div class="cta-right">
+<div class="cta-right" id="contact-form">
 <form action="https://formspree.io/f/mojolyke" class="cta-form-wrap" method="POST">
 <input type="hidden" name="_next" value="https://kropkapl.com/ua/thank-you.html"/>
 <p class="form-intro" data-i="form_intro">Безкоштовно розберемо вашу ситуацію і підкажемо, що робити далі. Ні до чого не зобов'язує.</p>
