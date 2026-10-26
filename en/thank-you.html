@@ -20,33 +20,5 @@ a { color:#c9a96e; text-decoration:none; font-weight:700; border:1px solid #c9a9
 <p>Your request has been sent. We will contact you shortly.</p>
 <a href="/en/">← Back to homepage</a>
 </div>
-<script>
-(function() {
-  var consent = localStorage.getItem('cookie_consent');
-  if (consent !== 'all') return;
-
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  var s1 = document.createElement('script');
-  s1.async = true;
-  s1.src = 'https://www.googletagmanager.com/gtag/js?id=G-08MSSBDJTM';
-  document.head.appendChild(s1);
-  gtag('js', new Date());
-  gtag('config', 'G-08MSSBDJTM', { anonymize_ip: true });
-  gtag('config', 'AW-6399773270');
-  gtag('event', 'generate_lead');
-
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1529138715636242');
-  fbq('track', 'Lead');
-})();
-</script>
 </body>
 </html>

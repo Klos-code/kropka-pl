@@ -605,7 +605,7 @@
 </div>
 </div>
 <div class="cta-right" id="contact-form">
-<form action="https://formspree.io/f/mojolyke" class="cta-form-wrap" method="POST">
+<form action="https://formspree.io/f/mojolyke" class="cta-form-wrap" id="contactForm" method="POST">
 <input type="hidden" name="_next" value="https://kropkapl.com/en/thank-you.html"/>
 <p class="form-intro" data-i="form_intro">We'll review your situation for free and advise on next steps. No obligation.</p>
 <div class="form-row">
@@ -764,6 +764,15 @@
     setTimeout(function() {
       document.getElementById('cookie-banner').style.display = 'flex';
     }, 1000);
+  }
+
+  // ── LEAD EVENT ON SUBMIT (fires immediately, doesn't depend on reaching thank-you.html) ──
+  var contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function() {
+      if (window._gaLoaded && window.gtag) { gtag('event', 'generate_lead'); }
+      if (window._fbPixelLoaded && window.fbq) { fbq('track', 'Lead'); }
+    });
   }
 </script>
 <!-- COOKIE BANNER -->
