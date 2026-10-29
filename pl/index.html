@@ -606,7 +606,6 @@
 </div>
 <div class="cta-right" id="contact-form">
 <form action="https://formspree.io/f/mojolyke" class="cta-form-wrap" id="contactForm" method="POST">
-<input type="hidden" name="_next" value="https://kropkapl.com/pl/thank-you.html"/>
 <p class="form-intro" data-i="form_intro">Bezpłatnie przeanalizujemy Twoją sytuację i podpowiemy, co dalej. Nie zobowiązuje do niczego.</p>
 <div class="form-row">
 <div class="form-field">
@@ -623,6 +622,7 @@
 <textarea name="message" placeholder="Karta pobytu, kończy się w marcu…" rows="4"></textarea>
 </div>
 <button class="form-submit" data-i="cta_btn" type="submit">Wyślij zgłoszenie</button>
+<p class="form-error" id="formError" style="display:none; color:#e57373; font-size:13px; text-align:center; margin-top:10px;">Nie udało się wysłać formularza. Spróbuj ponownie lub zadzwoń: +48 539 408 468</p>
 <p class="form-note" data-i="form_note">Administratorem danych jest Viktoriia Yudina Kropka PL, Katowice. Dane przetwarzane są w celu odpowiedzi na zgłoszenie (art. 6 ust. 1 lit. b RODO). Przysługuje Ci prawo dostępu, sprostowania i usunięcia. Szczegóły: <a href="/rodo.html" style="color:var(--gold);text-decoration:underline;">RODO</a>.</p>
 </form>
 </div>
@@ -766,12 +766,34 @@
     }, 1000);
   }
 
-  // ── LEAD EVENT ON SUBMIT (fires immediately, doesn't depend on reaching thank-you.html) ──
+  // ── FORM SUBMIT: fire Lead immediately, then submit via AJAX and redirect ourselves ──
+  // (Formspree's own redirect-after-submit is a paid feature on the free plan, so we
+  // can't rely on it — submitting via fetch lets us control the redirect for free.)
   var contactForm = document.getElementById('contactForm');
   if (contactForm) {
-    contactForm.addEventListener('submit', function() {
+    var submitBtn = contactForm.querySelector('.form-submit');
+    var errorEl = document.getElementById('formError');
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
       if (window._gaLoaded && window.gtag) { gtag('event', 'generate_lead'); }
       if (window._fbPixelLoaded && window.fbq) { fbq('track', 'Lead'); }
+      if (errorEl) errorEl.style.display = 'none';
+      if (submitBtn) submitBtn.disabled = true;
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(response) {
+        if (response.ok) {
+          window.location.href = '/pl/thank-you.html';
+        } else {
+          if (submitBtn) submitBtn.disabled = false;
+          if (errorEl) errorEl.style.display = 'block';
+        }
+      }).catch(function() {
+        if (submitBtn) submitBtn.disabled = false;
+        if (errorEl) errorEl.style.display = 'block';
+      });
     });
   }
 </script>

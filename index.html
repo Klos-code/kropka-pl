@@ -606,7 +606,6 @@
 </div>
 <div class="cta-right" id="contact-form">
 <form action="https://formspree.io/f/mojolyke" class="cta-form-wrap" id="contactForm" method="POST">
-<input type="hidden" name="_next" value="https://kropkapl.com/thank-you.html"/>
 <p class="form-intro" data-i="form_intro">Бесплатно разберём вашу ситуацию и подскажем, что делать дальше. Ни к чему не обязывает.</p>
 <div class="form-row">
 <div class="form-field">
@@ -623,6 +622,7 @@
 <textarea name="message" placeholder="Карта побыта, заканчивается в марте…" rows="4"></textarea>
 </div>
 <button class="form-submit" data-i="cta_btn" type="submit">Отправить заявку</button>
+<p class="form-error" id="formError" style="display:none; color:#e57373; font-size:13px; text-align:center; margin-top:10px;">Не удалось отправить форму. Попробуйте ещё раз или позвоните нам: +48 539 408 468</p>
 <p class="form-note" data-i="form_note">Администратор данных — Viktoriia Yudina Kropka PL, Катовице. Данные обрабатываются для ответа на заявку (ст. 6(1)(b) RODO). Вы вправе запросить доступ, исправление или удаление. Подробнее: <a href="/rodo.html" style="color:var(--gold);text-decoration:underline;">RODO</a>.</p>
 </form>
 </div>
@@ -766,12 +766,34 @@
     }, 1000);
   }
 
-  // ── LEAD EVENT ON SUBMIT (fires immediately, doesn't depend on reaching thank-you.html) ──
+  // ── FORM SUBMIT: fire Lead immediately, then submit via AJAX and redirect ourselves ──
+  // (Formspree's own redirect-after-submit is a paid feature on the free plan, so we
+  // can't rely on it — submitting via fetch lets us control the redirect for free.)
   var contactForm = document.getElementById('contactForm');
   if (contactForm) {
-    contactForm.addEventListener('submit', function() {
+    var submitBtn = contactForm.querySelector('.form-submit');
+    var errorEl = document.getElementById('formError');
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
       if (window._gaLoaded && window.gtag) { gtag('event', 'generate_lead'); }
       if (window._fbPixelLoaded && window.fbq) { fbq('track', 'Lead'); }
+      if (errorEl) errorEl.style.display = 'none';
+      if (submitBtn) submitBtn.disabled = true;
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(response) {
+        if (response.ok) {
+          window.location.href = '/thank-you.html';
+        } else {
+          if (submitBtn) submitBtn.disabled = false;
+          if (errorEl) errorEl.style.display = 'block';
+        }
+      }).catch(function() {
+        if (submitBtn) submitBtn.disabled = false;
+        if (errorEl) errorEl.style.display = 'block';
+      });
     });
   }
 </script>
