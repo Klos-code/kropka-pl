@@ -752,6 +752,38 @@
     fbq('track', 'PageView');
   }
 
+  // ── META CONVERSIONS API (server-side, only for users who accepted all cookies) ──
+  var CAPI_WORKER_URL = 'https://kropka-capi.kropkapl.workers.dev/';
+
+  function sha256Hex(str) {
+    var enc = new TextEncoder().encode(str);
+    return crypto.subtle.digest('SHA-256', enc).then(function(buf) {
+      return Array.prototype.map.call(new Uint8Array(buf), function(b) {
+        return b.toString(16).padStart(2, '0');
+      }).join('');
+    });
+  }
+
+  function sendCapiLead(phoneRaw, eventId) {
+    try {
+      var phoneDigits = (phoneRaw || '').replace(/[^0-9]/g, '');
+      var fbp = (document.cookie.match(/_fbp=([^;]+)/) || [])[1];
+      var fbc = (document.cookie.match(/_fbc=([^;]+)/) || [])[1];
+      var payload = { event_id: eventId, event_source_url: window.location.href };
+      if (fbp) payload.fbp = fbp;
+      if (fbc) payload.fbc = fbc;
+      var hashPromise = phoneDigits ? sha256Hex(phoneDigits) : Promise.resolve(null);
+      hashPromise.then(function(phHash) {
+        if (phHash) payload.ph = phHash;
+        fetch(CAPI_WORKER_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        }).catch(function() {});
+      });
+    } catch (e) {}
+  }
+
   function setCookieConsent(val) {
     localStorage.setItem('cookie_consent', val);
     document.getElementById('cookie-banner').style.display = 'none';
@@ -780,7 +812,12 @@
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
       if (window._gaLoaded && window.gtag) { gtag('event', 'generate_lead'); }
-      if (window._fbPixelLoaded && window.fbq) { fbq('track', 'Lead'); }
+      if (window._fbPixelLoaded && window.fbq) {
+        var leadEventId = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : (String(Date.now()) + Math.random().toString(16).slice(2));
+        fbq('track', 'Lead', {}, { eventID: leadEventId });
+        var phoneField = contactForm.querySelector('[name="phone"]');
+        sendCapiLead(phoneField ? phoneField.value : '', leadEventId);
+      }
       if (errorEl) errorEl.style.display = 'none';
       if (submitBtn) submitBtn.disabled = true;
       fetch(contactForm.action, {
