@@ -755,6 +755,8 @@
   function setCookieConsent(val) {
     localStorage.setItem('cookie_consent', val);
     document.getElementById('cookie-banner').style.display = 'none';
+    document.getElementById('cookie-backdrop').style.display = 'none';
+    document.body.style.overflow = '';
     if (val === 'all') { loadGA(); loadMetaPixel(); }
   }
 
@@ -763,6 +765,8 @@
   else if (!consent) {
     setTimeout(function() {
       document.getElementById('cookie-banner').style.display = 'flex';
+      document.getElementById('cookie-backdrop').style.display = 'block';
+      document.body.style.overflow = 'hidden';
     }, 1000);
   }
 
@@ -798,14 +802,15 @@
   }
 </script>
 <!-- COOKIE BANNER -->
+<div id="cookie-backdrop" style="display:none; position:fixed; inset:0; z-index:998; background:rgba(0,0,0,0.6);"></div>
 <div id="cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:999; background:#131f17; border-top:1px solid rgba(255,255,255,0.07); box-shadow:0 -8px 40px rgba(0,0,0,0.4); padding:20px 32px; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; font-family:'Space Grotesk',sans-serif;">
 <div style="flex:1; min-width:260px;">
-<p style="font-size:14px; color:#f0ebe0; font-weight:600; margin-bottom:4px;">Используем cookies</p>
-<p style="font-size:13px; color:#7a8a7e; line-height:1.6;">Мы используем аналитические файлы cookie (Google Analytics) для улучшения сайта. <a href="/politykacookies.html" style="color:#c9a96e; text-decoration:underline;">Подробнее</a></p>
+<p style="font-size:14px; color:#f0ebe0; font-weight:600; margin-bottom:4px;">Використовуємо cookies</p>
+<p style="font-size:13px; color:#7a8a7e; line-height:1.6;">Ми використовуємо аналітичні файли cookie (Google Analytics) для покращення сайту. <a href="/politykacookies.html" style="color:#c9a96e; text-decoration:underline;">Детальніше</a></p>
 </div>
 <div style="display:flex; gap:10px; flex-shrink:0; flex-wrap:wrap;">
-<button onclick="setCookieConsent('necessary')" style="padding:10px 20px; border:1px solid rgba(255,255,255,0.1); background:transparent; border-radius:6px; font-size:13px; font-family:'Space Grotesk',sans-serif; color:#7a8a7e; cursor:pointer; transition:color .2s;">Только необходимые</button>
-<button onclick="setCookieConsent('all')" style="padding:10px 24px; border:none; background:#c9a96e; border-radius:6px; font-size:13px; font-weight:700; font-family:'Space Grotesk',sans-serif; color:#0c1710; cursor:pointer;">Принять все</button>
+<button onclick="setCookieConsent('necessary')" style="padding:10px 20px; border:1px solid rgba(255,255,255,0.1); background:transparent; border-radius:6px; font-size:13px; font-family:'Space Grotesk',sans-serif; color:#7a8a7e; cursor:pointer; transition:color .2s;">Лише необхідні</button>
+<button onclick="setCookieConsent('all')" style="padding:10px 24px; border:none; background:#c9a96e; border-radius:6px; font-size:13px; font-weight:700; font-family:'Space Grotesk',sans-serif; color:#0c1710; cursor:pointer;">Прийняти всі</button>
 </div>
 </div>
 </body>

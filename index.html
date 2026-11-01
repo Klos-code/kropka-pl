@@ -755,6 +755,8 @@
   function setCookieConsent(val) {
     localStorage.setItem('cookie_consent', val);
     document.getElementById('cookie-banner').style.display = 'none';
+    document.getElementById('cookie-backdrop').style.display = 'none';
+    document.body.style.overflow = '';
     if (val === 'all') { loadGA(); loadMetaPixel(); }
   }
 
@@ -763,6 +765,8 @@
   else if (!consent) {
     setTimeout(function() {
       document.getElementById('cookie-banner').style.display = 'flex';
+      document.getElementById('cookie-backdrop').style.display = 'block';
+      document.body.style.overflow = 'hidden';
     }, 1000);
   }
 
@@ -798,6 +802,7 @@
   }
 </script>
 <!-- COOKIE BANNER -->
+<div id="cookie-backdrop" style="display:none; position:fixed; inset:0; z-index:998; background:rgba(0,0,0,0.6);"></div>
 <div id="cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:999; background:#131f17; border-top:1px solid rgba(255,255,255,0.07); box-shadow:0 -8px 40px rgba(0,0,0,0.4); padding:20px 32px; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; font-family:'Space Grotesk',sans-serif;">
 <div style="flex:1; min-width:260px;">
 <p style="font-size:14px; color:#f0ebe0; font-weight:600; margin-bottom:4px;">Используем cookies</p>
