@@ -1,0 +1,638 @@
+{
+ "data": [
+  {
+   "actions": [
+    {
+     "action_type": "link_click",
+     "value": "606"
+    },
+    {
+     "action_type": "post_reaction",
+     "value": "142"
+    },
+    {
+     "action_type": "landing_page_view",
+     "value": "28"
+    },
+    {
+     "action_type": "onsite_web_lead",
+     "value": "3"
+    },
+    {
+     "action_type": "omni_landing_page_view",
+     "value": "28"
+    },
+    {
+     "action_type": "click_to_call_native_call_placed",
+     "value": "5"
+    },
+    {
+     "action_type": "onsite_conversion.post_unlike",
+     "value": "8"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "10559"
+    },
+    {
+     "action_type": "like",
+     "value": "24"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "190"
+    },
+    {
+     "action_type": "comment",
+     "value": "13"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "10583"
+    },
+    {
+     "action_type": "post_interaction_net",
+     "value": "182"
+    },
+    {
+     "action_type": "post",
+     "value": "17"
+    },
+    {
+     "action_type": "onsite_conversion.post_save",
+     "value": "18"
+    },
+    {
+     "action_type": "onsite_conversion.post_net_comment",
+     "value": "13"
+    },
+    {
+     "action_type": "click_to_call_call_confirm",
+     "value": "5"
+    },
+    {
+     "action_type": "onsite_conversion.post_net_save",
+     "value": "18"
+    },
+    {
+     "action_type": "onsite_conversion.post_net_like",
+     "value": "134"
+    },
+    {
+     "action_type": "lead",
+     "value": "3"
+    },
+    {
+     "action_type": "video_view",
+     "value": "9763"
+    },
+    {
+     "action_type": "call_confirm_grouped",
+     "value": "5"
+    },
+    {
+     "action_type": "offsite_conversion.fb_pixel_lead",
+     "value": "3"
+    },
+    {
+     "action_type": "offsite_lead_add_20_s_calls",
+     "value": "3"
+    }
+   ],
+   "cost_per_action_type": [
+    {
+     "action_type": "offsite_lead_add_20_s_calls",
+     "value": "269.75"
+    },
+    {
+     "action_type": "call_confirm_grouped",
+     "value": "161.85"
+    },
+    {
+     "action_type": "video_view",
+     "value": "0.082889"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "0.076641"
+    },
+    {
+     "action_type": "click_to_call_call_confirm",
+     "value": "161.85"
+    },
+    {
+     "action_type": "lead",
+     "value": "269.75"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "4.259211"
+    },
+    {
+     "action_type": "link_click",
+     "value": "1.335396"
+    },
+    {
+     "action_type": "like",
+     "value": "33.71875"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "0.076467"
+    },
+    {
+     "action_type": "omni_landing_page_view",
+     "value": "28.901786"
+    },
+    {
+     "action_type": "onsite_web_lead",
+     "value": "269.75"
+    },
+    {
+     "action_type": "landing_page_view",
+     "value": "28.901786"
+    },
+    {
+     "action_type": "click_to_call_native_call_placed",
+     "value": "161.85"
+    }
+   ],
+   "cpm": "24.258821",
+   "ctr": "4.013909",
+   "date_start": "2026-08-31",
+   "date_stop": "2026-11-16",
+   "clicks": "1339",
+   "frequency": "3.020554",
+   "impressions": "33359",
+   "reach": "11044",
+   "spend": "809.25",
+   "campaign_name": "\"Лиды\" Офис призыв"
+  },
+  {
+   "actions": [
+    {
+     "action_type": "link_click",
+     "value": "31"
+    },
+    {
+     "action_type": "post_reaction",
+     "value": "13"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "1088"
+    },
+    {
+     "action_type": "like",
+     "value": "2"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "17"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "1090"
+    },
+    {
+     "action_type": "post_interaction_net",
+     "value": "17"
+    },
+    {
+     "action_type": "post",
+     "value": "3"
+    },
+    {
+     "action_type": "onsite_conversion.post_save",
+     "value": "1"
+    },
+    {
+     "action_type": "onsite_conversion.post_net_save",
+     "value": "1"
+    },
+    {
+     "action_type": "onsite_conversion.post_net_like",
+     "value": "13"
+    },
+    {
+     "action_type": "video_view",
+     "value": "1040"
+    }
+   ],
+   "cost_per_action_type": [
+    {
+     "action_type": "video_view",
+     "value": "0.117798"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "0.112601"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "7.206471"
+    },
+    {
+     "action_type": "link_click",
+     "value": "3.951935"
+    },
+    {
+     "action_type": "like",
+     "value": "61.255"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "0.112395"
+    }
+   ],
+   "cpm": "25.33292",
+   "ctr": "2.956989",
+   "date_start": "2026-08-31",
+   "date_stop": "2026-11-16",
+   "clicks": "143",
+   "frequency": "2.5096",
+   "impressions": "4836",
+   "reach": "1927",
+   "spend": "122.51",
+   "campaign_name": "Ставка только на сообщения"
+  },
+  {
+   "actions": [
+    {
+     "action_type": "link_click",
+     "value": "222"
+    },
+    {
+     "action_type": "post_reaction",
+     "value": "77"
+    },
+    {
+     "action_type": "landing_page_view",
+     "value": "15"
+    },
+    {
+     "action_type": "omni_landing_page_view",
+     "value": "15"
+    },
+    {
+     "action_type": "click_to_call_native_call_placed",
+     "value": "1"
+    },
+    {
+     "action_type": "onsite_conversion.post_unlike",
+     "value": "1"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "5077"
+    },
+    {
+     "action_type": "like",
+     "value": "14"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "115"
+    },
+    {
+     "action_type": "comment",
+     "value": "3"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "5091"
+    },
+    {
+     "action_type": "post_interaction_net",
+     "value": "113"
+    },
+    {
+     "action_type": "post",
+     "value": "16"
+    },
+    {
+     "action_type": "onsite_conversion.post_unsave",
+     "value": "1"
+    },
+    {
+     "action_type": "onsite_conversion.post_save",
+     "value": "19"
+    },
+    {
+     "action_type": "onsite_conversion.post_net_comment",
+     "value": "3"
+    },
+    {
+     "action_type": "click_to_call_call_confirm",
+     "value": "2"
+    },
+    {
+     "action_type": "onsite_conversion.post_net_save",
+     "value": "18"
+    },
+    {
+     "action_type": "onsite_conversion.post_net_like",
+     "value": "76"
+    },
+    {
+     "action_type": "video_view",
+     "value": "4740"
+    },
+    {
+     "action_type": "call_confirm_grouped",
+     "value": "2"
+    }
+   ],
+   "cost_per_action_type": [
+    {
+     "action_type": "call_confirm_grouped",
+     "value": "173.03"
+    },
+    {
+     "action_type": "video_view",
+     "value": "0.073008"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "0.068162"
+    },
+    {
+     "action_type": "click_to_call_call_confirm",
+     "value": "173.03"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "3.009217"
+    },
+    {
+     "action_type": "link_click",
+     "value": "1.558829"
+    },
+    {
+     "action_type": "like",
+     "value": "24.718571"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "0.067975"
+    },
+    {
+     "action_type": "omni_landing_page_view",
+     "value": "23.070667"
+    },
+    {
+     "action_type": "landing_page_view",
+     "value": "23.070667"
+    },
+    {
+     "action_type": "click_to_call_native_call_placed",
+     "value": "346.06"
+    }
+   ],
+   "cpm": "18.887676",
+   "ctr": "3.067351",
+   "date_start": "2026-08-31",
+   "date_stop": "2026-11-16",
+   "clicks": "562",
+   "frequency": "2.557153",
+   "impressions": "18322",
+   "reach": "7165",
+   "spend": "346.06",
+   "campaign_name": "Сайт новый"
+  },
+  {
+   "actions": [
+    {
+     "action_type": "link_click",
+     "value": "35"
+    },
+    {
+     "action_type": "offsite_search_add_20_s_calls",
+     "value": "2"
+    },
+    {
+     "action_type": "offsite_purchase_add_20_s_calls",
+     "value": "2"
+    },
+    {
+     "action_type": "offsite_initiate_checkout_add_20_s_calls",
+     "value": "2"
+    },
+    {
+     "action_type": "post_reaction",
+     "value": "28"
+    },
+    {
+     "action_type": "offsite_content_view_add_20_s_calls",
+     "value": "2"
+    },
+    {
+     "action_type": "offsite_complete_registration_add_20_s_calls",
+     "value": "2"
+    },
+    {
+     "action_type": "click_to_call_native_call_placed",
+     "value": "2"
+    },
+    {
+     "action_type": "onsite_conversion.post_unlike",
+     "value": "2"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "3327"
+    },
+    {
+     "action_type": "like",
+     "value": "6"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "37"
+    },
+    {
+     "action_type": "comment",
+     "value": "3"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "3333"
+    },
+    {
+     "action_type": "post_interaction_net",
+     "value": "35"
+    },
+    {
+     "action_type": "post",
+     "value": "4"
+    },
+    {
+     "action_type": "onsite_conversion.post_save",
+     "value": "2"
+    },
+    {
+     "action_type": "onsite_conversion.post_net_comment",
+     "value": "3"
+    },
+    {
+     "action_type": "click_to_call_call_confirm",
+     "value": "2"
+    },
+    {
+     "action_type": "onsite_conversion.post_net_save",
+     "value": "2"
+    },
+    {
+     "action_type": "onsite_conversion.post_net_like",
+     "value": "26"
+    },
+    {
+     "action_type": "grouped_pixel_custom_conversions_add_20_s_calls",
+     "value": "2"
+    },
+    {
+     "action_type": "click_to_call_native_20s_call_connect",
+     "value": "2"
+    },
+    {
+     "action_type": "custom_event_actions_add_20_s_calls",
+     "value": "2"
+    },
+    {
+     "action_type": "offsite_add_to_cart_add_20_s_calls",
+     "value": "2"
+    },
+    {
+     "action_type": "click_to_call_native_60s_call_connect",
+     "value": "2"
+    },
+    {
+     "action_type": "video_view",
+     "value": "3255"
+    },
+    {
+     "action_type": "call_confirm_grouped",
+     "value": "2"
+    },
+    {
+     "action_type": "offsite_lead_add_20_s_calls",
+     "value": "2"
+    }
+   ],
+   "cost_per_action_type": [
+    {
+     "action_type": "offsite_contact_website_add_20_s_calls",
+     "value": "127.085"
+    },
+    {
+     "action_type": "offsite_initiate_checkout_add_20_s_calls",
+     "value": "127.085"
+    },
+    {
+     "action_type": "offsite_content_view_add_20_s_calls",
+     "value": "127.085"
+    },
+    {
+     "action_type": "offsite_complete_registration_add_20_s_calls",
+     "value": "127.085"
+    },
+    {
+     "action_type": "offsite_lead_add_20_s_calls",
+     "value": "127.085"
+    },
+    {
+     "action_type": "click_to_call_native_60s_call_connect",
+     "value": "127.085"
+    },
+    {
+     "action_type": "call_confirm_grouped",
+     "value": "127.085"
+    },
+    {
+     "action_type": "offsite_purchase_add_20_s_calls",
+     "value": "127.085"
+    },
+    {
+     "action_type": "video_view",
+     "value": "0.078086"
+    },
+    {
+     "action_type": "custom_event_actions_add_20_s_calls",
+     "value": "127.085"
+    },
+    {
+     "action_type": "click_to_call_native_20s_call_connect",
+     "value": "127.085"
+    },
+    {
+     "action_type": "offsite_search_add_20_s_calls",
+     "value": "127.085"
+    },
+    {
+     "action_type": "grouped_pixel_custom_conversions_add_20_s_calls",
+     "value": "127.085"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "0.076396"
+    },
+    {
+     "action_type": "click_to_call_call_confirm",
+     "value": "127.085"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "6.869459"
+    },
+    {
+     "action_type": "link_click",
+     "value": "7.262"
+    },
+    {
+     "action_type": "like",
+     "value": "42.361667"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "0.076259"
+    },
+    {
+     "action_type": "offsite_submit_application_add_20_s_calls",
+     "value": "127.085"
+    },
+    {
+     "action_type": "offsite_start_trial_add_20_s_calls",
+     "value": "127.085"
+    },
+    {
+     "action_type": "offsite_add_to_cart_add_20_s_calls",
+     "value": "127.085"
+    },
+    {
+     "action_type": "click_to_call_native_call_placed",
+     "value": "127.085"
+    },
+    {
+     "action_type": "offsite_schedule_add_20_s_calls",
+     "value": "127.085"
+    }
+   ],
+   "cpm": "17.201543",
+   "ctr": "1.739307",
+   "date_start": "2026-08-31",
+   "date_stop": "2026-11-16",
+   "clicks": "257",
+   "frequency": "2.316714",
+   "impressions": "14776",
+   "reach": "6378",
+   "spend": "254.17",
+   "campaign_name": "Звонки тест"
+  }
+ ],
+ "paging": {
+  "cursors": {
+   "before": "MAZDZD",
+   "after": "MwZDZD"
+  }
+ }
+}

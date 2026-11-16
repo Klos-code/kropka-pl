@@ -1,0 +1,788 @@
+{
+ "data": [
+  {
+   "actions": [
+    {
+     "action_type": "link_click",
+     "value": "1"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "2"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "2"
+    },
+    {
+     "action_type": "video_view",
+     "value": "1"
+    }
+   ],
+   "cost_per_action_type": [
+    {
+     "action_type": "video_view",
+     "value": "0.04"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "0.02"
+    },
+    {
+     "action_type": "link_click",
+     "value": "0.04"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "0.02"
+    }
+   ],
+   "cpm": "13.333333",
+   "ctr": "33.333333",
+   "date_start": "2026-11-07",
+   "date_stop": "2026-11-07",
+   "clicks": "1",
+   "frequency": "1",
+   "impressions": "3",
+   "reach": "3",
+   "spend": "0.04"
+  },
+  {
+   "actions": [
+    {
+     "action_type": "link_click",
+     "value": "1"
+    },
+    {
+     "action_type": "post_reaction",
+     "value": "2"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "343"
+    },
+    {
+     "action_type": "like",
+     "value": "1"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "2"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "344"
+    },
+    {
+     "action_type": "post_interaction_net",
+     "value": "2"
+    },
+    {
+     "action_type": "onsite_conversion.post_net_like",
+     "value": "2"
+    },
+    {
+     "action_type": "video_view",
+     "value": "340"
+    }
+   ],
+   "cost_per_action_type": [
+    {
+     "action_type": "video_view",
+     "value": "0.085088"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "0.084344"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "14.465"
+    },
+    {
+     "action_type": "link_click",
+     "value": "28.93"
+    },
+    {
+     "action_type": "like",
+     "value": "28.93"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "0.084099"
+    }
+   ],
+   "cpm": "19.299533",
+   "ctr": "1.067378",
+   "date_start": "2026-11-08",
+   "date_stop": "2026-11-08",
+   "clicks": "16",
+   "frequency": "1.290017",
+   "impressions": "1499",
+   "reach": "1162",
+   "spend": "28.93"
+  },
+  {
+   "actions": [
+    {
+     "action_type": "link_click",
+     "value": "5"
+    },
+    {
+     "action_type": "post_reaction",
+     "value": "2"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "164"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "3"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "164"
+    },
+    {
+     "action_type": "post_interaction_net",
+     "value": "3"
+    },
+    {
+     "action_type": "post",
+     "value": "1"
+    },
+    {
+     "action_type": "onsite_conversion.post_net_like",
+     "value": "2"
+    },
+    {
+     "action_type": "video_view",
+     "value": "156"
+    }
+   ],
+   "cost_per_action_type": [
+    {
+     "action_type": "video_view",
+     "value": "0.12391"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "0.117866"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "6.443333"
+    },
+    {
+     "action_type": "link_click",
+     "value": "3.866"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "0.117866"
+    }
+   ],
+   "cpm": "26.407104",
+   "ctr": "2.185792",
+   "date_start": "2026-11-09",
+   "date_stop": "2026-11-09",
+   "clicks": "16",
+   "frequency": "1.273043",
+   "impressions": "732",
+   "reach": "575",
+   "spend": "19.33"
+  },
+  {
+   "actions": [
+    {
+     "action_type": "link_click",
+     "value": "1"
+    },
+    {
+     "action_type": "post_reaction",
+     "value": "1"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "186"
+    },
+    {
+     "action_type": "like",
+     "value": "1"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "2"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "187"
+    },
+    {
+     "action_type": "post_interaction_net",
+     "value": "2"
+    },
+    {
+     "action_type": "post",
+     "value": "1"
+    },
+    {
+     "action_type": "onsite_conversion.post_net_like",
+     "value": "1"
+    },
+    {
+     "action_type": "video_view",
+     "value": "183"
+    }
+   ],
+   "cost_per_action_type": [
+    {
+     "action_type": "video_view",
+     "value": "0.089727"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "0.08828"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "8.21"
+    },
+    {
+     "action_type": "link_click",
+     "value": "16.42"
+    },
+    {
+     "action_type": "like",
+     "value": "16.42"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "0.087807"
+    }
+   ],
+   "cpm": "17.88671",
+   "ctr": "2.069717",
+   "date_start": "2026-11-10",
+   "date_stop": "2026-11-10",
+   "clicks": "19",
+   "frequency": "1.209486",
+   "impressions": "918",
+   "reach": "759",
+   "spend": "16.42"
+  },
+  {
+   "actions": [
+    {
+     "action_type": "post_reaction",
+     "value": "3"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "297"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "3"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "297"
+    },
+    {
+     "action_type": "post_interaction_net",
+     "value": "3"
+    },
+    {
+     "action_type": "onsite_conversion.post_net_like",
+     "value": "3"
+    },
+    {
+     "action_type": "video_view",
+     "value": "294"
+    }
+   ],
+   "cost_per_action_type": [
+    {
+     "action_type": "video_view",
+     "value": "0.082619"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "0.081785"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "8.096667"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "0.081785"
+    }
+   ],
+   "cpm": "17.093596",
+   "ctr": "1.618578",
+   "date_start": "2026-11-11",
+   "date_stop": "2026-11-11",
+   "clicks": "23",
+   "frequency": "1.312096",
+   "impressions": "1421",
+   "reach": "1083",
+   "spend": "24.29"
+  },
+  {
+   "actions": [
+    {
+     "action_type": "post_reaction",
+     "value": "2"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "253"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "4"
+    },
+    {
+     "action_type": "comment",
+     "value": "1"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "253"
+    },
+    {
+     "action_type": "post_interaction_net",
+     "value": "4"
+    },
+    {
+     "action_type": "onsite_conversion.post_save",
+     "value": "1"
+    },
+    {
+     "action_type": "onsite_conversion.post_net_comment",
+     "value": "1"
+    },
+    {
+     "action_type": "onsite_conversion.post_net_save",
+     "value": "1"
+    },
+    {
+     "action_type": "onsite_conversion.post_net_like",
+     "value": "2"
+    },
+    {
+     "action_type": "video_view",
+     "value": "249"
+    }
+   ],
+   "cost_per_action_type": [
+    {
+     "action_type": "video_view",
+     "value": "0.072008"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "0.07087"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "4.4825"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "0.07087"
+    }
+   ],
+   "cpm": "15.659389",
+   "ctr": "1.659389",
+   "date_start": "2026-11-12",
+   "date_stop": "2026-11-12",
+   "clicks": "19",
+   "frequency": "1.287964",
+   "impressions": "1145",
+   "reach": "889",
+   "spend": "17.93"
+  },
+  {
+   "actions": [
+    {
+     "action_type": "post_engagement",
+     "value": "155"
+    },
+    {
+     "action_type": "like",
+     "value": "1"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "156"
+    },
+    {
+     "action_type": "video_view",
+     "value": "155"
+    }
+   ],
+   "cost_per_action_type": [
+    {
+     "action_type": "video_view",
+     "value": "0.095161"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "0.095161"
+    },
+    {
+     "action_type": "like",
+     "value": "14.75"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "0.094551"
+    }
+   ],
+   "cpm": "20.068027",
+   "ctr": "2.040816",
+   "date_start": "2026-11-13",
+   "date_stop": "2026-11-13",
+   "clicks": "15",
+   "frequency": "1.222962",
+   "impressions": "735",
+   "reach": "601",
+   "spend": "14.75"
+  },
+  {
+   "actions": [
+    {
+     "action_type": "link_click",
+     "value": "3"
+    },
+    {
+     "action_type": "post_reaction",
+     "value": "2"
+    },
+    {
+     "action_type": "onsite_conversion.post_unlike",
+     "value": "1"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "218"
+    },
+    {
+     "action_type": "like",
+     "value": "1"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "3"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "219"
+    },
+    {
+     "action_type": "post_interaction_net",
+     "value": "2"
+    },
+    {
+     "action_type": "post",
+     "value": "1"
+    },
+    {
+     "action_type": "onsite_conversion.post_net_like",
+     "value": "1"
+    },
+    {
+     "action_type": "video_view",
+     "value": "212"
+    }
+   ],
+   "cost_per_action_type": [
+    {
+     "action_type": "video_view",
+     "value": "0.082311"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "0.080046"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "5.816667"
+    },
+    {
+     "action_type": "link_click",
+     "value": "5.816667"
+    },
+    {
+     "action_type": "like",
+     "value": "17.45"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "0.07968"
+    }
+   ],
+   "cpm": "17.243083",
+   "ctr": "2.470356",
+   "date_start": "2026-11-14",
+   "date_stop": "2026-11-14",
+   "clicks": "25",
+   "frequency": "1.234146",
+   "impressions": "1012",
+   "reach": "820",
+   "spend": "17.45"
+  },
+  {
+   "actions": [
+    {
+     "action_type": "link_click",
+     "value": "3"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "222"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "222"
+    },
+    {
+     "action_type": "video_view",
+     "value": "219"
+    }
+   ],
+   "cost_per_action_type": [
+    {
+     "action_type": "video_view",
+     "value": "0.106393"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "0.104955"
+    },
+    {
+     "action_type": "link_click",
+     "value": "7.766667"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "0.104955"
+    }
+   ],
+   "cpm": "21.105072",
+   "ctr": "1.358696",
+   "date_start": "2026-11-15",
+   "date_stop": "2026-11-15",
+   "clicks": "15",
+   "frequency": "1.270426",
+   "impressions": "1104",
+   "reach": "869",
+   "spend": "23.3"
+  },
+  {
+   "actions": [
+    {
+     "action_type": "link_click",
+     "value": "2"
+    },
+    {
+     "action_type": "offsite_search_add_20_s_calls",
+     "value": "1"
+    },
+    {
+     "action_type": "offsite_purchase_add_20_s_calls",
+     "value": "1"
+    },
+    {
+     "action_type": "offsite_initiate_checkout_add_20_s_calls",
+     "value": "1"
+    },
+    {
+     "action_type": "post_reaction",
+     "value": "3"
+    },
+    {
+     "action_type": "offsite_content_view_add_20_s_calls",
+     "value": "1"
+    },
+    {
+     "action_type": "offsite_complete_registration_add_20_s_calls",
+     "value": "1"
+    },
+    {
+     "action_type": "click_to_call_native_call_placed",
+     "value": "1"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "126"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "3"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "126"
+    },
+    {
+     "action_type": "post_interaction_net",
+     "value": "3"
+    },
+    {
+     "action_type": "click_to_call_call_confirm",
+     "value": "1"
+    },
+    {
+     "action_type": "onsite_conversion.post_net_like",
+     "value": "3"
+    },
+    {
+     "action_type": "grouped_pixel_custom_conversions_add_20_s_calls",
+     "value": "1"
+    },
+    {
+     "action_type": "click_to_call_native_20s_call_connect",
+     "value": "1"
+    },
+    {
+     "action_type": "custom_event_actions_add_20_s_calls",
+     "value": "1"
+    },
+    {
+     "action_type": "offsite_add_to_cart_add_20_s_calls",
+     "value": "1"
+    },
+    {
+     "action_type": "click_to_call_native_60s_call_connect",
+     "value": "1"
+    },
+    {
+     "action_type": "video_view",
+     "value": "121"
+    },
+    {
+     "action_type": "call_confirm_grouped",
+     "value": "1"
+    },
+    {
+     "action_type": "offsite_lead_add_20_s_calls",
+     "value": "1"
+    }
+   ],
+   "cost_per_action_type": [
+    {
+     "action_type": "offsite_contact_website_add_20_s_calls",
+     "value": "9.7"
+    },
+    {
+     "action_type": "offsite_initiate_checkout_add_20_s_calls",
+     "value": "9.7"
+    },
+    {
+     "action_type": "offsite_content_view_add_20_s_calls",
+     "value": "9.7"
+    },
+    {
+     "action_type": "offsite_complete_registration_add_20_s_calls",
+     "value": "9.7"
+    },
+    {
+     "action_type": "offsite_lead_add_20_s_calls",
+     "value": "9.7"
+    },
+    {
+     "action_type": "click_to_call_native_60s_call_connect",
+     "value": "9.7"
+    },
+    {
+     "action_type": "call_confirm_grouped",
+     "value": "9.7"
+    },
+    {
+     "action_type": "offsite_purchase_add_20_s_calls",
+     "value": "9.7"
+    },
+    {
+     "action_type": "video_view",
+     "value": "0.080165"
+    },
+    {
+     "action_type": "custom_event_actions_add_20_s_calls",
+     "value": "9.7"
+    },
+    {
+     "action_type": "click_to_call_native_20s_call_connect",
+     "value": "9.7"
+    },
+    {
+     "action_type": "offsite_search_add_20_s_calls",
+     "value": "9.7"
+    },
+    {
+     "action_type": "grouped_pixel_custom_conversions_add_20_s_calls",
+     "value": "9.7"
+    },
+    {
+     "action_type": "post_engagement",
+     "value": "0.076984"
+    },
+    {
+     "action_type": "click_to_call_call_confirm",
+     "value": "9.7"
+    },
+    {
+     "action_type": "post_interaction_gross",
+     "value": "3.233333"
+    },
+    {
+     "action_type": "link_click",
+     "value": "4.85"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "0.076984"
+    },
+    {
+     "action_type": "offsite_submit_application_add_20_s_calls",
+     "value": "9.7"
+    },
+    {
+     "action_type": "offsite_start_trial_add_20_s_calls",
+     "value": "9.7"
+    },
+    {
+     "action_type": "offsite_add_to_cart_add_20_s_calls",
+     "value": "9.7"
+    },
+    {
+     "action_type": "click_to_call_native_call_placed",
+     "value": "9.7"
+    },
+    {
+     "action_type": "offsite_schedule_add_20_s_calls",
+     "value": "9.7"
+    }
+   ],
+   "cpm": "16.524702",
+   "ctr": "1.703578",
+   "date_start": "2026-11-16",
+   "date_stop": "2026-11-16",
+   "clicks": "10",
+   "frequency": "1.181087",
+   "impressions": "587",
+   "reach": "497",
+   "spend": "9.7"
+  }
+ ],
+ "paging": {
+  "cursors": {
+   "before": "MAZDZD",
+   "after": "OQZDZD"
+  }
+ }
+}

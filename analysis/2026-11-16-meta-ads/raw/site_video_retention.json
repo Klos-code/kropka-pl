@@ -1,0 +1,202 @@
+{
+ "data": [
+  {
+   "date_start": "2026-08-31",
+   "date_stop": "2026-11-16",
+   "video_avg_time_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "5"
+    }
+   ],
+   "video_p100_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "87"
+    }
+   ],
+   "video_p25_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "660"
+    }
+   ],
+   "video_p50_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "248"
+    }
+   ],
+   "video_p75_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "136"
+    }
+   ],
+   "video_play_actions": [
+    {
+     "action_type": "video_view",
+     "value": "11960"
+    }
+   ],
+   "impressions": "13097",
+   "video_thruplay_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "667"
+    }
+   ],
+   "ad_name": "Офис Кропка призыв"
+  },
+  {
+   "date_start": "2026-08-31",
+   "date_stop": "2026-11-16",
+   "video_avg_time_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "4"
+    }
+   ],
+   "video_p100_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "27"
+    }
+   ],
+   "video_p25_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "184"
+    }
+   ],
+   "video_p50_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "118"
+    }
+   ],
+   "video_p75_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "68"
+    }
+   ],
+   "video_play_actions": [
+    {
+     "action_type": "video_view",
+     "value": "1760"
+    }
+   ],
+   "impressions": "1944",
+   "video_thruplay_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "148"
+    }
+   ],
+   "ad_name": "крео3"
+  },
+  {
+   "date_start": "2026-08-31",
+   "date_stop": "2026-11-16",
+   "video_avg_time_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "5"
+    }
+   ],
+   "video_p100_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "115"
+    }
+   ],
+   "video_p25_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "749"
+    }
+   ],
+   "video_p50_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "560"
+    }
+   ],
+   "video_p75_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "469"
+    }
+   ],
+   "video_play_actions": [
+    {
+     "action_type": "video_view",
+     "value": "5933"
+    }
+   ],
+   "impressions": "6409",
+   "video_thruplay_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "673"
+    }
+   ],
+   "ad_name": "крео02"
+  },
+  {
+   "date_start": "2026-08-31",
+   "date_stop": "2026-11-16",
+   "video_avg_time_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "5"
+    }
+   ],
+   "video_p100_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "32"
+    }
+   ],
+   "video_p25_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "229"
+    }
+   ],
+   "video_p50_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "125"
+    }
+   ],
+   "video_p75_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "81"
+    }
+   ],
+   "video_play_actions": [
+    {
+     "action_type": "video_view",
+     "value": "3801"
+    }
+   ],
+   "impressions": "4254",
+   "video_thruplay_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "282"
+    }
+   ],
+   "ad_name": "крео04 Тетя Ира"
+  }
+ ],
+ "paging": {
+  "cursors": {
+   "before": "MAZDZD",
+   "after": "MwZDZD"
+  }
+ }
+}

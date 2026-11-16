@@ -1,0 +1,118 @@
+{
+ "data": [
+  {
+   "date_start": "2026-10-20",
+   "date_stop": "2026-11-16",
+   "video_30_sec_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "134"
+    }
+   ],
+   "video_avg_time_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "4"
+    }
+   ],
+   "video_p100_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "82"
+    }
+   ],
+   "video_p25_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "443"
+    }
+   ],
+   "video_p50_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "274"
+    }
+   ],
+   "video_p75_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "172"
+    }
+   ],
+   "video_play_actions": [
+    {
+     "action_type": "video_view",
+     "value": "5012"
+    }
+   ],
+   "impressions": "5622",
+   "video_thruplay_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "324"
+    }
+   ],
+   "ad_name": "Новое объявление с целью \"Лиды\""
+  },
+  {
+   "date_start": "2026-10-20",
+   "date_stop": "2026-11-16",
+   "video_30_sec_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "237"
+    }
+   ],
+   "video_avg_time_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "4"
+    }
+   ],
+   "video_p100_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "63"
+    }
+   ],
+   "video_p25_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "366"
+    }
+   ],
+   "video_p50_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "209"
+    }
+   ],
+   "video_p75_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "130"
+    }
+   ],
+   "video_play_actions": [
+    {
+     "action_type": "video_view",
+     "value": "8092"
+    }
+   ],
+   "impressions": "9154",
+   "video_thruplay_watched_actions": [
+    {
+     "action_type": "video_view",
+     "value": "412"
+    }
+   ],
+   "ad_name": "крео Тетя ира 04"
+  }
+ ],
+ "paging": {
+  "cursors": {
+   "before": "MAZDZD",
+   "after": "MQZDZD"
+  }
+ }
+}

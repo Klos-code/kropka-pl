@@ -1,0 +1,22 @@
+{
+ "data": [
+  {
+   "name": "Новое объявление с целью \"Лиды\"",
+   "status": "PAUSED",
+   "effective_status": "PAUSED",
+   "id": "120250915914210262"
+  },
+  {
+   "name": "крео Тетя ира 04",
+   "status": "ACTIVE",
+   "effective_status": "ACTIVE",
+   "id": "120251289184320262"
+  }
+ ],
+ "paging": {
+  "cursors": {
+   "before": "QVFIVDMxN1dXWkJZAVlh5YXZANLTdueU5tMVlBMEhLZA0trN21WT2M0NUNSNC1VUGMxUXB3ZAkdaeDFhYy14RFRtMWt4ME5xaDMxeEw2QzRvandoTHdXdW1YV2FB",
+   "after": "QVFIVHViUGgxVmRuTzBoZAXhsb0FuQU84N2FiTHB0OVM4Vk1YR1dyaVhFWThTMDM1RDBlZA0o3Sl9OU1BQUFpqZAFh5WlcwTFJ4bU8ydFJmdnYzcFJkZAWg4cGhR"
+  }
+ }
+}

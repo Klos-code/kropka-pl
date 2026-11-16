@@ -1,0 +1,48 @@
+{
+ "name": "Новая группа объявлений с целью \"Лиды\"",
+ "targeting": {
+  "age_max": 65,
+  "age_min": 20,
+  "geo_locations": {
+   "custom_locations": [
+    {
+     "distance_unit": "kilometer",
+     "latitude": 50.261242,
+     "longitude": 19.021794,
+     "radius": 30,
+     "primary_city_id": 1853017,
+     "region_id": 3004,
+     "country": "PL"
+    }
+   ],
+   "location_types": [
+    "home",
+    "recent"
+   ]
+  },
+  "locales": [
+   17,
+   52
+  ],
+  "brand_safety_content_filter_levels": [
+   "FACEBOOK_RELAXED"
+  ],
+  "instream_video_skippable_excluded": true,
+  "targeting_automation": {
+   "advantage_audience": 1
+  }
+ },
+ "optimization_goal": "QUALITY_CALL",
+ "attribution_spec": [
+  {
+   "event_type": "CLICK_THROUGH",
+   "window_days": 1
+  }
+ ],
+ "destination_type": "PHONE_CALL",
+ "promoted_object": {
+  "page_id": "533998669797426",
+  "smart_pse_enabled": false
+ },
+ "id": "120250915914200262"
+}
